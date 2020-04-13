@@ -303,7 +303,7 @@ function App() {
       <Card
         name="Jainam Shah"
         hasVideo={true}
-        vidSrc={require("./assets/videos/jainam.mp4")}
+        vidSrc={require("./assets/videos/jainam1.mp4")}
         imgSrc={require("./assets/images/jainam1.jpg")}
         position={"Science and Engineering Representative"}
         canStat={`For me, being a member of the student government means channelling the energy that we all bring along to trigger a positive change in everyone's life here in SFSU.
