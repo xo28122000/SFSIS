@@ -26,6 +26,12 @@
   box-shadow: 5px 10px #e7d75e;
 }
 
+.card-conatiner {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-self: center;
+}
+
 .card-video-root {
   margin: 10px;
   padding: 10px;
@@ -94,6 +100,7 @@
 
 .card-desc-footer-button {
   flex: 1;
+  margin-top: 30px;
   justify-self: flex-end;
   align-self: flex-end;
 }
