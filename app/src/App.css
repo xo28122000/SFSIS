@@ -30,6 +30,8 @@
   display: flex;
   flex-wrap: wrap-reverse;
   align-self: center;
+  font-size: 20px;
+  letter-spacing: 4px;
 }
 
 .card-video-root {
@@ -51,9 +53,6 @@
 
 .card-right-root {
   padding: 20px;
-
-  font-size: 20px;
-  letter-spacing: 4px;
 
   display: flex;
   flex-direction: column;

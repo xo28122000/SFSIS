@@ -1,7 +1,27 @@
 import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-
+import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./App.css";
+
+const InfoCard = props => {
+  return (
+    <div className="card-root">
+      <div
+        className="card-conatiner"
+        style={{
+          padding: "20px",
+          flexDirection: "column",
+
+          width: "100%"
+        }}
+      >
+        {props.children}
+      </div>
+    </div>
+  );
+};
 
 const Card = props => {
   const [modal, setModal] = useState(false);
@@ -23,12 +43,24 @@ const Card = props => {
               width="100%"
               height="auto"
               controls
+              controlsList="nodownload"
               style={{ borderRadius: "10px" }}
             >
               <source src={props.vidSrc} type="video/mp4" />
             </video>
           </div>
           <div className="card-right-root">
+            <div className="card-desc-root">
+              <div className="card-desc-lines" style={{ fontSize: "35px" }}>
+                {props.name}
+              </div>
+              <div className="card-desc-lines">For AS {props.position}</div>
+              <div className="card-desc-footer-button">
+                <Button style={{ backgroundColor: "#8a4af3" }} onClick={toggle}>
+                  My candidate statement
+                </Button>
+              </div>
+            </div>
             <div className="card-img-root">
               <img
                 src={props.imgSrc}
@@ -38,17 +70,6 @@ const Card = props => {
                   borderRadius: "10px"
                 }}
               />
-            </div>
-            <div className="card-desc-root">
-              <div className="card-desc-lines">Hey I'm {props.name}!</div>
-              <div className="card-desc-lines">
-                I'm standing for the role of {props.position}!
-              </div>
-              <div className="card-desc-footer-button">
-                <Button style={{ backgroundColor: "#8a4af3" }} onClick={toggle}>
-                  My candidate statement
-                </Button>
-              </div>
             </div>
           </div>
         </div>
@@ -67,10 +88,10 @@ const Card = props => {
           <div className="card-right-root">
             {/* <div className="card-img-root"></div> */}
             <div className="card-desc-root">
-              <div className="card-desc-lines">Hey I'm {props.name}!</div>
-              <div className="card-desc-lines">
-                I'm standing for the role of {props.position}!
+              <div className="card-desc-lines" style={{ fontSize: "35px" }}>
+                {props.name}
               </div>
+              <div className="card-desc-lines">For AS {props.position}</div>
               <div className="card-desc-footer-button">
                 <Button style={{ backgroundColor: "#8a4af3" }} onClick={toggle}>
                   My candidate statement
@@ -87,10 +108,115 @@ const Card = props => {
 function App() {
   return (
     <div id="App-root">
+      <InfoCard>
+        <div
+          style={{
+            textAlign: "center",
+            fontSize: "40px"
+          }}
+        >
+          <div>SF SIS</div>
+          <div>Students First</div>
+          <div> Students in Solidarity</div>
+          <a
+            href="https://www.instagram.com/studentsfirst.sfsu/"
+            target="blank"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+        </div>
+      </InfoCard>
+
+      <InfoCard>
+        <div className="card-desc-lines">Issues We Are Focusing On:</div>
+        <div style={{ margin: "10px" }}></div>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          <div
+            className="card-desc-lines"
+            style={{
+              background: "#decdfa",
+              padding: "5px",
+              margin: "10px",
+              borderWidth: "2px",
+              borderStyle: "dashed",
+              justifySelf: "center",
+              textAlign: "center"
+            }}
+          >
+            Improving Student Health Services
+          </div>
+          <div
+            className="card-desc-lines"
+            style={{
+              background: "#decdfa",
+              padding: "5px",
+              margin: "10px",
+              borderWidth: "2px",
+              borderStyle: "dashed",
+              justifySelf: "center",
+              textAlign: "center"
+            }}
+          >
+            Addressing Basic Needs
+          </div>
+          <div
+            className="card-desc-lines"
+            style={{
+              background: "#decdfa",
+              padding: "5px",
+              margin: "10px",
+              borderWidth: "2px",
+              borderStyle: "dashed",
+              justifySelf: "center",
+              textAlign: "center"
+            }}
+          >
+            Title IX Reform
+          </div>
+          <div
+            className="card-desc-lines"
+            style={{
+              background: "#decdfa",
+              padding: "5px",
+              margin: "10px",
+              borderWidth: "2px",
+              borderStyle: "dashed",
+              justifySelf: "center",
+              textAlign: "center"
+            }}
+          >
+            Student Engagement
+          </div>
+          <div
+            className="card-desc-lines"
+            style={{
+              background: "#decdfa",
+              padding: "5px",
+              margin: "10px",
+              borderWidth: "2px",
+              borderStyle: "dashed",
+              justifySelf: "center",
+              textAlign: "center"
+            }}
+          >
+            Admin Accountability
+          </div>
+        </div>
+      </InfoCard>
+
+      <InfoCard>
+        <div
+          className="card-desc-lines"
+          style={{ textAlign: "center", fontSize: "30px" }}
+        >
+          Meet our Slate members
+        </div>
+      </InfoCard>
+
       <Card
-        name="Alondra Esquivel"
+        name="Alondra Esquivel Garcia"
         hasVideo={true}
-        vidSrc={require("./assets/videos/VP F.MOV")}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/alondra2.JPG")}
         position={"VP Facilities & Services"}
         canStat={`Hello Gators! I’m Alondra Esquivel Garcia and I’m running as your next VP of Facilities and Services for Associated Students. Currently, I’m third year double majoring in Political Science and Race & Resistance Studies. As a first generation college student, I have learned that advocating for others and public service is necessary. I’m passionate about helping those in need and getting projects started.
@@ -111,7 +237,8 @@ function App() {
       />
       <Card
         name="Andrew Carrillo"
-        hasVideo={false}
+        hasVideo={true}
+        vidSrc={require("./assets/videos/Andrew.mov")}
         imgSrc={require("./assets/images/andrew1.JPG")}
         position={"President"}
         canStat={`Hello everyone! My name is Andrew Carrillo and I am running to be your next Associated Students President. I am running for multiple reasons, but they are centered around my belief that Associated Students should be serving the needs of every student on campus. Whether you are a first year student just arriving at SFSU or a graduating senior who is ready for the next chapter of life you should feel supported by your student government. One of my main priorities would be to establish a Basic Needs Program that focuses on supporting students who are in need of groceries, hygiene products, and especially provide a centralized hub where students are given information and options for affordable housing in the area. I will work tirelessly to increase funding and resources for AS Programs like Project Connect and the Women's Center so they feel supported by their student government. Lastly, I believe there needs to be greater access to space for student organizations. There needs to be more space on campus where student organizations can gather for meetings, store their organization materials, and host events free of cost.
@@ -122,6 +249,7 @@ function App() {
       <Card
         name="Brittany Nguyen"
         hasVideo={false}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/brittany1.JPG")}
         position={"Graduate Studies Representative"}
         canStat={`Being a 1st year graduate student, I had to learn and navigate the resources and what services were available for me. I can imagine how many other students who may experience the same way of trying to navigate and find support so that they can excel being a student here - and I want to help. Which is why I am running to be your next Graduate Representative because I want to initiate dialogue and create tangible steps toproduce positive changes for the benefit of our graduate student community.
@@ -142,6 +270,7 @@ function App() {
       <Card
         name="Chantel Bermudez"
         hasVideo={false}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/chantel3.JPG")}
         position={"VP Social Justice & Equity"}
         canStat={`As the daughter of an Immigrant, student of the ethnic studies college, and the product of an education
@@ -165,6 +294,7 @@ function App() {
       <Card
         name="Ja' Corey"
         hasVideo={false}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/jacorey1.JPG")}
         position={"Ethnic Studies Representative"}
         canStat={`Hello Gators, I’m running for this position because I believe I can bring a voice to the ethnic studies college that has been long been silent. If elected I would become an advocate for the students of our college and make sure we have a voice in important decisions such as funding and class availability. I believe that in working with the elected administration and peers within the college, together we can secure the resources and funding we deserve.
@@ -173,6 +303,7 @@ function App() {
       <Card
         name="Jainam Shah"
         hasVideo={false}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/jainam1.jpg")}
         position={"Science and Engineering Representative"}
         canStat={`For me, being a member of the student government means channelling the energy that we all bring along to trigger a positive change in everyone's life here in SFSU.
@@ -186,7 +317,8 @@ function App() {
       />
       <Card
         name="Joshua Ochoa"
-        hasVideo={false}
+        hasVideo={true}
+        vidSrc={require("./assets/videos/joshua.mp4")}
         imgSrc={require("./assets/images/joshua1.jpg")}
         position={"VP External Affairs"}
         canStat={`Here at San Francisco State, students often feel unrepresented and unheard by our university and student government. Too often, students struggle with food insecurity, housing insecurity, financial insecurity, and the lack of financial aid.
@@ -210,7 +342,8 @@ function App() {
       />
       <Card
         name="Rashid A Rahman"
-        hasVideo={false}
+        hasVideo={true}
+        vidSrc={require("./assets/videos/rashid.MOV")}
         imgSrc={require("./assets/images/rashid1.jpg")}
         position={"VP Finance"}
         canStat={`Hello, Fellow Gators! I’m Rashid Abdul Rahiman and I am currently a Junior in SF State. I’m
@@ -234,6 +367,7 @@ and advocacy in the AS Budget.`}
       <Card
         name="Samiksha Nehra"
         hasVideo={false}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/samiksha1.JPG")}
         position={"Business Representative"}
         canStat={`Hello Gators, I am Samiksha Nehra, and I am running for Associated student Business
@@ -250,6 +384,7 @@ and advocacy in the AS Budget.`}
       <Card
         name="Tatiana Orellana"
         hasVideo={false}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/tatiana1.PNG")}
         position={"Health and Social Sciences Representative"}
         canStat={``}
@@ -257,6 +392,7 @@ and advocacy in the AS Budget.`}
       <Card
         name="Ty Lewis"
         hasVideo={false}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/ty1.JPG")}
         position={"Liberal and Creative Arts Representative"}
         canStat={``}
@@ -264,10 +400,29 @@ and advocacy in the AS Budget.`}
       <Card
         name="Zoram Mercado"
         hasVideo={false}
+        vidSrc={require("./assets/videos/Alondra.mp4")}
         imgSrc={require("./assets/images/zoram1.png")}
         position={"VP Internal Affairs"}
         canStat={`“Being involved as a student organization leader for my entire college career, has taught me 1st hand the lack of representation and involvement students have in decisions that directly affect students. As VP of Internal Affairs, my focus will lie in updating students, making meetings accessible, and physically making sure the voices of students are heard and implemented. There are far too many resources that students are not aware of. I will ensure that students understand what is available to them and implement their feedback for the resources that do not satisfyingly meet their needs. College students in San Francisco lack basic needs, such as food, housing, health wellness, and legal resources. There are many young efforts on campus that are tackling these issues but must be enhanced and unified with the help of students to be fully effective. My experience as a community organizer has taught me how to bring students together and apply their strengths to the collective vision. I always make sure that I bring ideas to the table as well as keep my vision flexible. I do not have all the solutions nor answers, but I do not hesitate to reach out to people and collect perspectives from students, faculty, and staff of all backgrounds. Perspective derives from the intersectionality of sexuality, gender, race, nationality, ethnicity, residency status, job status, career of interest, socioeconomic class, and religion. Making an effort to understand and apply these perspectives is key to executing a goal towards a healthy community.”`}
       />
+
+      <div
+        className="footer-root"
+        style={{
+          textAlign: "center",
+          backgroundColor: "#bc9af7",
+          marginTop: "70px",
+          padding: "10px",
+          paddingTop: "30px",
+          // paddingBottom: "30px",
+          fontSize: "10px"
+        }}
+      >
+        Made with ❤ by{" "}
+        <a href="http://xo28122000.github.io/" target="blank">
+          Jainam Shah
+        </a>{" "}
+      </div>
     </div>
   );
 }
