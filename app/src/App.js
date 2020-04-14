@@ -248,8 +248,8 @@ function App() {
       />
       <Card
         name="Brittany Nguyen"
-        hasVideo={false}
-        vidSrc={require("./assets/videos/Alondra.mp4")}
+        hasVideo={true}
+        vidSrc={require("./assets/videos/Brittnay.MOV")}
         imgSrc={require("./assets/images/brittany1.JPG")}
         position={"Graduate Studies Representative"}
         canStat={`Being a 1st year graduate student, I had to learn and navigate the resources and what services were available for me. I can imagine how many other students who may experience the same way of trying to navigate and find support so that they can excel being a student here - and I want to help. Which is why I am running to be your next Graduate Representative because I want to initiate dialogue and create tangible steps toproduce positive changes for the benefit of our graduate student community.
@@ -269,8 +269,8 @@ function App() {
       />
       <Card
         name="Chantel Bermudez"
-        hasVideo={false}
-        vidSrc={require("./assets/videos/Alondra.mp4")}
+        hasVideo={true}
+        vidSrc={require("./assets/videos/Chantel.mp4")}
         imgSrc={require("./assets/images/chantel3.JPG")}
         position={"VP Social Justice & Equity"}
         canStat={`As the daughter of an Immigrant, student of the ethnic studies college, and the product of an education
@@ -366,8 +366,8 @@ and advocacy in the AS Budget.`}
       />
       <Card
         name="Samiksha Nehra"
-        hasVideo={false}
-        vidSrc={require("./assets/videos/Alondra.mp4")}
+        hasVideo={true}
+        vidSrc={require("./assets/videos/samiksha.mp4")}
         imgSrc={require("./assets/images/samiksha1.JPG")}
         position={"Business Representative"}
         canStat={`Hello Gators, I am Samiksha Nehra, and I am running for Associated student Business
@@ -399,8 +399,8 @@ and advocacy in the AS Budget.`}
       />
       <Card
         name="Zoram Mercado"
-        hasVideo={false}
-        vidSrc={require("./assets/videos/Alondra.mp4")}
+        hasVideo={true}
+        vidSrc={require("./assets/videos/zoram1.mp4")}
         imgSrc={require("./assets/images/zoram1.png")}
         position={"VP Internal Affairs"}
         canStat={`“Being involved as a student organization leader for my entire college career, has taught me 1st hand the lack of representation and involvement students have in decisions that directly affect students. As VP of Internal Affairs, my focus will lie in updating students, making meetings accessible, and physically making sure the voices of students are heard and implemented. There are far too many resources that students are not aware of. I will ensure that students understand what is available to them and implement their feedback for the resources that do not satisfyingly meet their needs. College students in San Francisco lack basic needs, such as food, housing, health wellness, and legal resources. There are many young efforts on campus that are tackling these issues but must be enhanced and unified with the help of students to be fully effective. My experience as a community organizer has taught me how to bring students together and apply their strengths to the collective vision. I always make sure that I bring ideas to the table as well as keep my vision flexible. I do not have all the solutions nor answers, but I do not hesitate to reach out to people and collect perspectives from students, faculty, and staff of all backgrounds. Perspective derives from the intersectionality of sexuality, gender, race, nationality, ethnicity, residency status, job status, career of interest, socioeconomic class, and religion. Making an effort to understand and apply these perspectives is key to executing a goal towards a healthy community.”`}
